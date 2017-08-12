@@ -1,0 +1,16 @@
+.checkbox-wrap
+	column-count 3
+	&__item
+		margin-bottom 5px
+		label
+			font 21px/1.1 bold-font
+			&::before
+				content ''
+				display inline-block
+				width $checkbox_fill_width
+				height $checkbox_fill_height
+				background url($checkbox_image) $checkbox_offset_x $checkbox_offset_y
+		input
+			display none
+			&:checked + label::before
+				background url($checkbox_image) $checkbox_offset_x $checkbox_offset_y,url($checkbox_fill_image) $checkbox_fill_offset_x $checkbox_fill_offset_y

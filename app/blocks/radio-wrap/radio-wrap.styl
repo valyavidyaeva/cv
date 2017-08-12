@@ -1,0 +1,18 @@
+.radio-wrap
+	display flex
+	&__item
+		margin-right 25px
+		label
+			font 20px/1.3 bold-font
+			&::before
+				content ''
+				display inline-block
+				padding-left 5px
+				vertical-align text-bottom
+				width $radio_fill_width
+				height $radio_fill_height
+				background url($radio_image) $radio_offset_x $radio_offset_y no-repeat
+		input
+			display none
+			&:checked + label::before
+				background url($radio_image) $radio_offset_x $radio_offset_y no-repeat, url($radio_fill_image) $radio_fill_offset_x $radio_fill_offset_y no-repeat

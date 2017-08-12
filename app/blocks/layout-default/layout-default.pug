@@ -1,0 +1,24 @@
+include ../../../bemto/bemto.pug
+include ../page/page
+include ../header/header
+include ../general-info/general-info
+include ../checkbox-wrap/checkbox-wrap
+include ../js-wrap/js-wrap
+include ../text-wrap/text-wrap
+include ../radio-wrap/radio-wrap
+include ../footer/footer
+include ../scripts/scripts
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	body
+		.page
+			+header
+			+general-info
+			+checkbox-wrap
+			+js-wrap
+			+text-wrap
+			+radio-wrap
+			+footer
+		+scripts(['app.min.js'])

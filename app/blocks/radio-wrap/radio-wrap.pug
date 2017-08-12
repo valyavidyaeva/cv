@@ -1,0 +1,9 @@
+mixin radio-wrap()
+	+b.SECTION
+		H2.title Какие у вас планы на будущее?
+		P.description Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+		+b.radio-wrap
+			each val, index in ['Верстать', 'Прокачиваться в JS', 'Менеджерство', 'Другое']
+				+e.item
+					input(type='radio' name='radio' id='radio'+index)
+					label(for='radio'+index)= val
