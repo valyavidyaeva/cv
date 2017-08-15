@@ -5,7 +5,7 @@ $(() => {
 	svg4everybody();
 });
 
-$('textarea').keyup(function(){
+$('textarea').keyup(function (){
 	$(this).height(100);
 	$(this).height(this.scrollHeight);
 });

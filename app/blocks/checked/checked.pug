@@ -1,0 +1,4 @@
+mixin checked(type, label, index, checked)
+	+e.item
+		input(type=type, name=type, checked=checked, id=type+index)
+		label(for=type+index)= label
