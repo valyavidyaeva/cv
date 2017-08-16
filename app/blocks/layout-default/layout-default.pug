@@ -1,8 +1,10 @@
 include ../../../bemto/bemto.pug
+include ../../../node_modules/jade-injected/jade-injected.pug
 include ../page/page
+include ../checked/checked
+include ../section/section
 include ../header/header
 include ../general-info/general-info
-include ../checked/checked
 include ../checkbox-wrap/checkbox-wrap
 include ../js-wrap/js-wrap
 include ../text-wrap/text-wrap
@@ -13,14 +15,7 @@ include ../scripts/scripts
 doctype html
 html(lang='ru')
 	include ../head/head
-	body
-		.page
-			+header
-			+general-info
-			+checkbox-wrap
-			+js-wrap
-			+text-wrap
-			+radio-wrap
-			+footer
-		+scripts(['app.min.js'])
-		+scripts(['rangeslider.js'])
+	+page
+		block content
+	+scripts(['app.min.js'])
+	+scripts(['rangeslider.js'])

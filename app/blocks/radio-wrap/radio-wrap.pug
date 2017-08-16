@@ -1,9 +1,8 @@
 - var radiolabel = ['Верстать', 'Прокачиваться в JS', 'Менеджерство', 'Другое'];
 - var radiochecked = [true,false,false,false];
 mixin radio-wrap()
-	+b.SECTION
-		H2.title Какие у вас планы на будущее?
-		P.description Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+	+b('section')
+		+section-info('Какие у вас планы на будущее?', 'Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.')
 		+b.radio-wrap
 			- for (var i=0; i<4; i++)
 				if radiochecked[i]

@@ -1,5 +1,12 @@
 extends /blocks/layout-default/layout-default
 
 block head
-	- var pageTitle = 'CSSSR CV';
-
+	title = 'CSSSR CV';
+block content
+	+header
+	+general-info
+	+checkbox-wrap
+	+js-wrap
+	+text-wrap
+	+radio-wrap
+	+footer
