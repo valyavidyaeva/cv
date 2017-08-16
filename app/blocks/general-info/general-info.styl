@@ -5,13 +5,18 @@
 	flex-wrap wrap
 	margin-bottom 20px
 	&__key
+		width 100%
 		align-self flex-end
 		margin-right 20px
 		font 22px bold-font
 		color primary-color
+		@media (min-width: 600px)
+			width: auto
 	&__value
 		flex 1 1 auto
+		max-width 100%
 		font text-fz text-font
+		word-wrap break-word
 		padding 5px
 		border-bottom 3px solid transparent
 		border-image url(/assets/images/line.png) 1

@@ -1,13 +1,19 @@
 .checkbox-wrap
-	column-count 3
+	column-count 1
+	column-gap 10px
 	margin-bottom: 65px
+	@media (min-width: 600px)
+		column-count 3	
 	&__item
 		margin-bottom 5px
 		label
+			display inline-flex
+			align-items baseline
 			font 21px/1.1 bold-font
 			&::before
 				content ''
 				display inline-block
+				margin-right 5px
 				width $checkbox_fill_width
 				height $checkbox_fill_height
 				background url($checkbox_image) $checkbox_offset_x $checkbox_offset_y
