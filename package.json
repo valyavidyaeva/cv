@@ -18,7 +18,7 @@
   "scripts": {
     "start": "gulp --debug",
     "build": "gulp build",
-    "production": "cross-env NODE_ENV=production npm-run-all clean build",
+    "production": "set NODE_ENV=production npm-run-all clean build",
     "make-block": "babel-node make-block.js",
     "lint:scripts": "eslint app gulp",
     "lint:styles": "gulp styles:lint",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh@github.com:CSSSR/valyavidyaeva/testgit.git"
+    "url": "git+ssh@github.com:CSSSR/valyavidyaeva/cv.git"
   },
   "author": "",
   "engines": {

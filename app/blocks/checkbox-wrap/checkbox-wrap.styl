@@ -1,11 +1,18 @@
 .checkbox-wrap
-	column-count 1
-	column-gap 10px
 	margin-bottom: 65px
-	@media (min-width: 600px)
-		column-count 3	
+	display flex
+	flex-wrap: wrap
+	flex-direction column
+	max-height 290px
 	&__item
+		flex 1 1 100%
+		max-width: 100%
 		margin-bottom 5px
+		&:nth-child(n+8):nth-child(-n+14)
+			padding 0 10px
+		@media (min-width: 680px)
+			flex 1 1 33.333%
+			max-width 33.333%
 		label
 			display inline-flex
 			align-items baseline
@@ -17,7 +24,13 @@
 				width $checkbox_fill_width
 				height $checkbox_fill_height
 				background url($checkbox_image) $checkbox_offset_x $checkbox_offset_y
+		span
+			white-space pre
+		a
+			color #1f5f97
+			&:hover
+				text-decoration none
 		input
 			display none
 			&:checked + label::before
-				background url($checkbox_image) $checkbox_offset_x $checkbox_offset_y,url($checkbox_fill_image) $checkbox_fill_offset_x $checkbox_fill_offset_y
+				background url($checkbox_image) $checkbox_offset_x $checkbox_offset_y, url($checkbox_fill_image) $checkbox_fill_offset_x $checkbox_fill_offset_y

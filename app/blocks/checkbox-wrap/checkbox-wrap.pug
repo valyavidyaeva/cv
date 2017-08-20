@@ -5,7 +5,14 @@ mixin checkbox-wrap()
 		+section-info('Расскажите о себе чекбоксами', 'Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.')
 		+b.checkbox-wrap
 			- for (var i=0; i<19; i++)
-				if checkboxchecked[i]
-					+checked('checkbox', checkboxlabel[i], i, 'checked')
+				if i!=16
+					if checkboxchecked[i]
+						+checked('checkbox', checkboxlabel[i], i, 'checked')
+					else
+						+checked('checkbox', checkboxlabel[i], i)
 				else
-					+checked('checkbox', checkboxlabel[i], i)
+					+e.item
+						input(type='checkbox', name='checkbox', checked=false, id='checkbox'+index)
+						label(for='checkbox'+index)
+							span Читаю 
+							a(href="http://blog.csssr.ru/", target="_blank") blog.csssr.ru
